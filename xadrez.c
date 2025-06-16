@@ -31,6 +31,28 @@ int main() {
         contadorRainha++;
     } while (contadorRainha <= casasRainha);
 
+    // ------------------ Movimento do Cavalo ------------------
+    // Simula o movimento do Cavalo em "L": duas casas para baixo e uma para a esquerda
+    // Utiliza loops aninhados (for + while)
+
+    printf("\nMovimento do Cavalo:\n");
+
+    int passosBaixo = 2;     // Número de casas para baixo
+    int passosEsquerda = 1;  // Número de casas para esquerda
+
+    // Loop externo: FOR para movimento para baixo
+    for (int i = 1; i <= passosBaixo; i++) {
+        printf("Baixo\n");
+        
+        // Loop interno: WHILE para movimento para a esquerda (só executa no último passo)
+        if (i == passosBaixo) {
+            int j = 1;
+            while (j <= passosEsquerda) {
+                printf("Esquerda\n");
+                j++;
+            }
+        }
+    }
+
     return 0;
 }
-
